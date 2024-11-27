@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:zarity_project/secrets.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -53,7 +54,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDVZOY5W1wb8yXMeSH2D4W4_9y-fMA0OxM',
+    apiKey: androidKey,
     appId: '1:716736274156:android:4f4a604c6e348901850fc9',
     messagingSenderId: '716736274156',
     projectId: 'zarity-be278',
