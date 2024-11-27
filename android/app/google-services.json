@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "716736274156",
+    "project_id": "zarity-be278",
+    "storage_bucket": "zarity-be278.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716736274156:android:4f4a604c6e348901850fc9",
+        "android_client_info": {
+          "package_name": "com.example.zar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVZOY5W1wb8yXMeSH2D4W4_9y-fMA0OxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
