@@ -55,9 +55,10 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: androidKey,
-    appId: '1:716736274156:android:4f4a604c6e348901850fc9',
+    appId: '1:716736274156:android:dcd2f19c8c37d2d3850fc9',
     messagingSenderId: '716736274156',
     projectId: 'zarity-be278',
     storageBucket: 'zarity-be278.firebasestorage.app',
   );
+
 }
