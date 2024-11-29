@@ -1,23 +1,45 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:zarity_project/providers/firebase_provider.dart';
+import 'package:zarity_project/models/blog.dart';
 
-class BlogDetailsScreen extends StatefulWidget {
-  const BlogDetailsScreen({super.key});
+class BlogDetailsScreen extends StatelessWidget {
+  const BlogDetailsScreen({super.key, required this.blog});
 
-  @override
-  State<BlogDetailsScreen> createState() => _BlogDetailsScreenState();
-}
-
-class _BlogDetailsScreenState extends State<BlogDetailsScreen> {
+  final Blog blog;
   @override
   Widget build(BuildContext context) {
-    final firebaseProvider = Provider.of<FirebaseProvider>(context);
-    if (firebaseProvider.data.isEmpty && !firebaseProvider.isLoading) {
-      firebaseProvider.fetchData();
-    }
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+          //actions -> deeplink
+          actions: [
+            TextButton(onPressed: (){}, child: const Text('Read More'))
+          ],
+          ),
+      body: Expanded(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              Text(
+                blog.title,
+                style:
+                    const TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              //image
+              Image.network(
+                blog.imageUrl,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              //content
+              Text(blog.content),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

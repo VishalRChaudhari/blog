@@ -36,7 +36,9 @@ class BlogTab extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const BlogDetailsScreen(),
+                                builder: (context) => BlogDetailsScreen(
+                                  blog: blog,
+                                ),
                               ),
                             );
                           },
